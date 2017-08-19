@@ -392,3 +392,9 @@ Caused by: org.gradle.api.tasks.testing.TestExecutionException: Test failed.
 
 !ENTRY org.eclipse.wst.server.discovery 1 0 2017-08-19 10:18:01.465
 !MESSAGE already installed: org.eclipse.jst.server.generic.jonas4
+
+!ENTRY org.eclipse.lsp4e 1 0 2017-08-19 11:33:03.275
+!MESSAGE Non IFiles not supported yet
+
+!ENTRY org.eclipse.lsp4e 1 0 2017-08-19 11:33:03.347
+!MESSAGE Non IFiles not supported yet
