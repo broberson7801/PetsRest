@@ -13,7 +13,7 @@
 		<properties>
 			<property name="javax.persistence.jdbc.url"
 				value="jdbc:mysql://localhost:3306/petsdb" />
-			<property name="javax.persistence.jdbc.user" value="bryan" />
+			<property name="javax.persistence.jdbc.user" value="Bryan" />
 			<property name="javax.persistence.jdbc.password" value="Bryan" />
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
 
