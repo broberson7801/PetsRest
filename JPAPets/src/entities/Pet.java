@@ -1,13 +1,16 @@
 package entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-@Table(name = "pets")
 @Entity
+@Table(name = "pets")
 public class Pet {
 
 	@Id
@@ -17,6 +20,13 @@ public class Pet {
 	private String name;
 
 	private String type;
+
+	@Column(name = "nick_name")
+	private String nickName;
+
+	@ManyToOne
+	@JoinColumn(name = "owner_id")
+	private User user;
 
 	public String getName() {
 		return name;
@@ -34,13 +44,30 @@ public class Pet {
 		this.type = type;
 	}
 
+	public String getNickName() {
+		return nickName;
+	}
+
+	public void setNickName(String nickName) {
+		this.nickName = nickName;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
 	public int getId() {
 		return id;
 	}
 
 	@Override
 	public String toString() {
-		return "Pet [id=" + id + ", name=" + name + ", type=" + type + "]";
+		return "Pet [id=" + id + ", name=" + name + ", type=" + type + ", nickName=" + nickName + ", user=" + user
+				+ "]";
 	}
 
 }
