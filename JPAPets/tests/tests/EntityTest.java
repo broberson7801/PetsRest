@@ -48,7 +48,7 @@ public class EntityTest {
 	@Test
 	public void test_fact_for_not_null_id() {
 		Integer factId = em.find(Fact.class, 2).getId();
-		assertEquals("7", factId);
+		assertEquals("2", factId);
 	}
 
 }
