@@ -1,13 +1,17 @@
 package entities;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity
 @Table(name = "pets")
@@ -23,10 +27,6 @@ public class Pet {
 
 	@Column(name = "nick_name")
 	private String nickName;
-
-	@ManyToOne
-	@JoinColumn(name = "owner_id")
-	private User user;
 
 	public String getName() {
 		return name;
@@ -52,22 +52,8 @@ public class Pet {
 		this.nickName = nickName;
 	}
 
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
-	}
-
 	public int getId() {
 		return id;
-	}
-
-	@Override
-	public String toString() {
-		return "Pet [id=" + id + ", name=" + name + ", type=" + type + ", nickName=" + nickName + ", user=" + user
-				+ "]";
 	}
 
 }

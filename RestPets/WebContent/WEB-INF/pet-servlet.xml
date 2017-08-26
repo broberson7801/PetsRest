@@ -25,9 +25,8 @@
 		<property name="entityManagerFactory" ref="myEntityManagerFactory" />
 	</bean>
 	
-	<bean id="petsdao" class="data.UserDAOImpl"/>
-	<bean id="petsdao" class="data.PetDAOImpl"/>
-	<bean id="petsdao" class="data.FactDAOImpl"/>
+	<bean id="petsdao1" class="data.PetDAOImpl"/>
+	<bean id="petsdao2" class="data.FactDAOImpl"/>
 	
 
 	<tx:annotation-driven transaction-manager="myTransactionManager" />
