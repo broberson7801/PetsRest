@@ -14,8 +14,11 @@
 <div>
 <input type="text" placeholder="id" ng-model="petty.id">
 	<input type="submit" value="show" ng-click="vm.showPet(petty.id)">
+	<h3>vm.onePet</h3>
 </div>
 
 <div ng-repeat="pet in vm.petsArray">
-	{{pet.name}}
+	<h3>{{pet}}</h3><br>
 </div>
+
+

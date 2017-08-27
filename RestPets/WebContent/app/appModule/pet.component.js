@@ -9,8 +9,7 @@ angular.module('appModule')
 			vm.petsAarray = [];
 			
 			petService.index().then(function(response) {
-				vm.petsArray = []
-				vm.petsArray.push(response.data);
+				vm.petsArray =response.data;
 				console.log(vm.petsArray);
 				
 			})
@@ -28,12 +27,12 @@ angular.module('appModule')
 				petService.destroy(id);
 			}
 			
-			vm.onePet = {};
+			vm.onePet;
 			
 			vm.showPet = function(id) {
-				vm.pet = petService.show(id);
+				vm.onePet = petService.show(id);
 				console.log("showPet called");
-				console.log(vm.pet);
+				console.log(vm.onePet);
 			}
 			
 		},
