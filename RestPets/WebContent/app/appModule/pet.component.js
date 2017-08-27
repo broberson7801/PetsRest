@@ -6,6 +6,8 @@ angular.module('appModule')
 		controller : function(petService) { 
 			var vm = this;
 			
+			vm.petsAarray = [];
+			
 			petService.index().then(function(response) {
 				vm.petsArray = []
 				vm.petsArray.push(response.data);
