@@ -6,13 +6,24 @@ angular.module('appModule')
 		controller : function(petService) { 
 			var vm = this;
 			
-			vm.petsAarray = [];
+			vm.hideEditForm = true;
+			
+			//vm.petsAarray = [];
 			
 			petService.index().then(function(response) {
 				vm.petsArray =response.data;
-				console.log(vm.petsArray);
 				
 			})
+			
+			vm.costOfPets = function() {
+				petService.index().then(function(response) {
+					vm.petsArray  = response.data;
+					vm.petsCost = vm.petsArray.length * 1270;
+					return vm.petsCost;
+				})
+			}
+			
+			vm.petsCost = vm.costOfPets();
 			
 			
 			vm.createPet = function(pet) {
@@ -27,13 +38,24 @@ angular.module('appModule')
 				petService.destroy(id);
 			}
 			
-			vm.onePet;
+			vm.onePet = {};
 			
 			vm.showPet = function(id) {
-				vm.onePet = petService.show(id);
-				console.log("showPet called");
-				console.log(vm.onePet);
+				petService.show(id).then(function(response) {
+					vm.onePet  = response.data;
+					vm.hideEditForm = false;
+					
+				});
 			}
+			
+			vm.editPet = function(id,pet) {
+				petService.update(id, pet).then(function(response) {
+					vm.editedPet = response.data;
+					console.log("editPet called");
+					console.log(vm.editedPet);
+				})
+			}
+			
 			
 		},
 		

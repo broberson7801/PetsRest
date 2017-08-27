@@ -49,7 +49,7 @@ public class PetController {
 		return null;
 	}
 
-	@RequestMapping(path = "pets/{id}", method = RequestMethod.POST)
+	@RequestMapping(path = "pets/{id}", method = RequestMethod.PUT)
 	public Pet update(@RequestBody String petJson, @PathVariable Integer id) {
 
 		ObjectMapper mapper = new ObjectMapper();
