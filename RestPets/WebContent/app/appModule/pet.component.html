@@ -1,0 +1,19 @@
+<div ng-repeat="pet in vm.petsArray">
+</div>
+
+<div>
+	<input type = "text" placeholder="name" ng-model="pet.name"><br>
+	<input type = "text" placeholder="type" ng-model="pet.type"><br>
+	<input type = "text" placeholder="a really cool nickname" ng-model="pet.nickName"><br>
+	<input type = "submit" value = "CREATE" ng-click="vm.createPet(pet)">
+</div>
+
+<div>
+	<input type="text" placeholder="id" ng-model="pet.id">
+	<input type="submit" value="DESTROY" ng-click="vm.destroyPet(pet.id)">
+</div>
+
+<div>
+<input type="text" placeholder="id" ng-model="petty.id">
+	<input type="submit" value="show" ng-click="vm.showPet(petty.id)">
+</div>
