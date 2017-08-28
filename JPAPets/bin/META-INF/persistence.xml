@@ -6,9 +6,7 @@
 	<persistence-unit name="pets">
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		
-		<class>entities.User</class>
 		<class>entities.Pet</class>
-		<class>entities.Fact</class>
 		
 
 
