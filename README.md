@@ -1,15 +1,11 @@
 # PetsRest
 
-This is a basic API that allows you to enter a pet name, a pet type, and that's it. You can see all pets entered, you can add a pet via POSTMAN or URL, you can delete a pet and edit a pet. Again, that's it.
+This is a basic API that allows you to create a pet, update a pet, delete a pet and see a particular pet. This API will also take the total number of pets, multiply it by 1270 to give a total cost.
 
-//the below will show all pets
-http://13.59.188.136:8080/PetsRest/api/pets/
+As of this update, after any creation, update, or delete, the page will have to be refreshed to see the changes updated on the API.
 
-//the below will show one pet
-http://13.59.188.136:8080/PetsRest/api/pets/2
+To get to the program, copy and paste the code below into a browser
 
-An example of a JSON object to pass via POSTMAN "PUT" method:
-{
-	"name": "koala",
-	"type": "a koala. Ooooo"
-}
+http://13.59.188.136:8080/RestPets/
+
+Due to serious time constraints, this program cannot look any prettier on the front end. 

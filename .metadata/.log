@@ -1921,3 +1921,6 @@ java.net.UnknownHostException: spring.io: nodename nor servname provided, or not
 
 !ENTRY org.eclipse.lsp4e 1 0 2017-08-28 08:03:08.345
 !MESSAGE Non IFiles not supported yet
+
+!ENTRY org.eclipse.lsp4e 1 0 2017-08-28 08:49:33.407
+!MESSAGE Non IFiles not supported yet

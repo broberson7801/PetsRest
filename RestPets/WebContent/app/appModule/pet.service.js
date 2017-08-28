@@ -2,7 +2,7 @@ angular.module('appModule')
 .factory('petService', function($http) {
   var service = {};
 
-  var BASE_URL = 'http://localhost:8080/RestPets/api/';
+  var BASE_URL = 'http://13.59.188.136:8080/RestPets/api/';
 
   service.index = function() {
     return $http({
